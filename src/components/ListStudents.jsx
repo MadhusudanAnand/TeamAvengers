@@ -52,6 +52,7 @@ export default class ListStudents extends Component {
 
                                 </tr>
                             </thead>
+
                             <tbody>
                                 {
                                     this.state.students.map(
@@ -71,13 +72,29 @@ export default class ListStudents extends Component {
                                                  <button style={{marginLeft: "10px"}}  className="btn btn-danger">Delete </button>
                                                  
                                              </td>
+                                             <p>{students.team_id}</p>
                                         </tr>
+                                      
                                     )
                                 }
                             </tbody>
                         </table>
 
+                        <div >
+
+                          <p>
+                            {
+                              this.state.students.map(stud=>
+                                
+                                  <p>{stud.name}</p>
+                                )
+                            }
+                          </p>
+                        </div>
+                       
+
                  </div>
+              
 
             </div>
       </div>
